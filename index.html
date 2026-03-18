@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Reminder Engine</title>
+</head>
+<body>
+    <!-- Hidden AI engine - your app talks to this -->
+    <div id="ai-container" style="display: none;"></div>
+
+    <!-- Load the JavaScript AI engine -->
+    <script src="ai.js"></script>
+    
+    <script>
+        // This runs when page loads
+        window.onload = function() {
+            console.log("AI Reminder Engine Ready");
+            
+            // Make sure AI is available for your app
+            if(window.AI) {
+                window.AI.ready = true;
+                console.log("AI Loaded Successfully");
+            }
+        };
+    </script>
+</body>
+</html>
