@@ -10,12 +10,20 @@ const AI = {
     // ===========================================
     categories: {
         // EDUCATION
-        exam: ['exam', 'test', 'quiz', 'midterm', 'final', 'sat', 'act', 'gre', 'certification'],
+        exam: ['exam', 'test', 'quiz', 'midterm', 'final', 'sat', 'act', 'gre', 'certification', 'assessment'],
         homework: ['homework', 'assignment', 'problem set', 'worksheet', 'exercises'],
         study: ['study', 'review', 'memorize', 'flashcards', 'read chapter', 'textbook'],
         essay: ['essay', 'paper', 'thesis', 'dissertation', 'research paper', 'write up'],
         project: ['project', 'capstone', 'portfolio', 'presentation', 'slides', 'demo'],
         lab: ['lab', 'experiment', 'report', 'scientific', 'research'],
+        
+        // SUBJECTS
+        math: ['math', 'mathematics', 'algebra', 'calculus', 'geometry', 'trigonometry', 'arithmetic'],
+        science: ['science', 'biology', 'chemistry', 'physics', 'astronomy', 'earth science'],
+        filipino: ['filipino', 'tagalog', 'philippine', 'wikang', 'panitikan'],
+        english: ['english', 'grammar', 'literature', 'writing', 'reading', 'vocabulary'],
+        history: ['history', 'social studies', 'geography', 'politics', 'government', 'civics', 'rizal', 'jose rizal', 'dr. rizal', 'noli', 'fili', 'el filibusterismo', 'noli me tangere'],
+        computer: ['it', 'programming', 'coding', 'web', 'software', 'developer', 'computer', 'html', 'css', 'javascript', 'react', 'app', 'mobile', 'database', 'backend', 'frontend', 'fullstack', 'api', 'algorithm'],
         
         // WORK
         meeting: ['meeting', 'call', 'sync', 'standup', 'conference', 'webinar', 'zoom'],
@@ -179,6 +187,129 @@ const AI = {
             "🎓 Even the 'failures' teach lessons!",
             "🤔 You're literally discovering",
             "🌍 How things work. That's awesome!"
+        ],
+        
+        // ===== NEW SUBJECT TEMPLATES =====
+        math: [
+            "🧮 Numbers are your friends!",
+            "🔢 Solve one problem at a time - you'll get there!",
+            "📐 Math is like a puzzle",
+            "🧩 Every step brings you closer to the solution!",
+            "✖️ You've got the formula for success",
+            "➗ Divide and conquer each problem!",
+            "📊 Math builds your brain muscles",
+            "💪 Every equation makes you stronger!",
+            "🔢 The answer is waiting for you",
+            "🧠 Trust your calculations - you know this!",
+            "📏 Think logically, solve systematically",
+            "🎯 You're training your problem-solving superpower!",
+            "➕ One plus one equals progress",
+            "✨ Every problem solved is a victory!",
+            "📐 Angles, equations, and solutions",
+            "🌟 You've got everything you need to succeed!"
+        ],
+        
+        science: [
+            "🔬 Science is discovery in action",
+            "🧪 Every experiment teaches you something new!",
+            "🌍 You're learning how the world works",
+            "✨ That's the coolest thing ever!",
+            "🧬 Science is curiosity in motion",
+            "🔭 Keep asking 'why' and you'll find answers!",
+            "⚛️ Atoms to galaxies, you're exploring it all",
+            "🚀 What an amazing journey!",
+            "🧫 The scientific method works",
+            "📝 Hypothesis, test, learn, repeat - you've got this!",
+            "🌡️ Science isn't just facts",
+            "💡 It's understanding the magic of our world!",
+            "🔬 Every great scientist started here",
+            "🌟 You're on your way to discoveries!",
+            "🧪 Stay curious, stay questioning",
+            "🔍 The answers are waiting for you!"
+        ],
+        
+        filipino: [
+            "🇵🇭 Ang wika ay kayamanan",
+            "📖 Mahalin ang sariling atin!",
+            "📚 Ang Filipino ay puso ng kultura",
+            "💖 Ipagmalaki ang ating wika!",
+            "✍️ Bawat salita ay may saysay",
+            "🌟 Isulat ang iyong mga kwento!",
+            "🇵🇭 Ang pag-aaral ng Filipino",
+            "🎓 Ay pagmamahal sa bayan!",
+            "📖 Ang literatura ay buhay",
+            "✨ Damhin ang bawat kwento!",
+            "💬 Ang wika ay tulay",
+            "🌉 Tulay tungo sa ating pagkakakilanlan!",
+            "🎭 Ang kultura natin ay mayaman",
+            "🌟 Ipagmalaki sa bawat salita!",
+            "📝 Maging matatas sa Filipino",
+            "💪 Ikaw ay kayang-kaya!"
+        ],
+        
+        english: [
+            "📖 Words are your superpower",
+            "✍️ Every sentence builds your voice!",
+            "🗣️ Speak with confidence",
+            "💬 Your thoughts deserve to be heard!",
+            "📚 Reading opens new worlds",
+            "🌍 Every page is an adventure!",
+            "✍️ Your words have power",
+            "💪 Use them to express, inspire, and create!",
+            "📝 Grammar is your foundation",
+            "🏗️ Build strong sentences, build strong ideas!",
+            "📖 Stories shape our world",
+            "🎭 Your voice matters in every story!",
+            "🗣️ Communication is key",
+            "🔑 You're unlocking doors with every word!",
+            "📚 From Shakespeare to now",
+            "✨ Language connects us all!"
+        ],
+        
+        history: [
+            "📜 History is our teacher",
+            "🏛️ Learn from the past, shape the future!",
+            "🌍 You're learning how we got here",
+            "🗺️ Every event connects to today!",
+            "📚 History is stories of people",
+            "👥 Their struggles, triumphs, and lessons!",
+            "🏛️ The past has wisdom for you",
+            "💡 Learn it, understand it, grow from it!",
+            "📖 Dates and events tell a story",
+            "🎭 You're reading the greatest story ever told!",
+            "🌄 Yesterday shapes tomorrow",
+            "🔮 You're part of history too!",
+            "📜 Remember, reflect, learn",
+            "🌟 History gives us perspective!",
+            "🏛️ Great leaders learned from history",
+            "👑 You're following in their footsteps!",
+            "🇵🇭 Dr. Jose Rizal showed us",
+            "💡 That one person CAN change the world!",
+            "📖 Noli Me Tangere and El Fili",
+            "✨ Are more than books - they're our heritage!",
+            "🕯️ Rizal's legacy lives on",
+            "🌟 Be inspired by his love for country!",
+            "🇵🇭 The pen is mightier than the sword",
+            "✍️ Rizal proved this. Your voice matters too!"
+        ],
+        
+        computer: [
+            "💻 Code is creativity in action",
+            "✨ Every line builds something amazing!",
+            "🐛 Bugs are just puzzles to solve",
+            "🔧 Debug, learn, and grow stronger!",
+            "🚀 You're building the future",
+            "💡 Every function, every feature matters!",
+            "⌨️ Programming is problem-solving",
+            "🧠 You're training your logic superpower!",
+            "💾 Keep coding, keep creating",
+            "🌟 Your skills will take you far!",
+            "🌐 You're learning the language of the future",
+            "📱 Every website, every app needs you!",
+            "🔨 Break big problems into small pieces",
+            "🧩 That's what great developers do!",
+            "⚡ Your code has power",
+            "✨ Make something amazing today!"
         ],
         
         // WORK
