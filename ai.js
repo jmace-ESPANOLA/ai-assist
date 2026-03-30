@@ -1,12 +1,13 @@
 // ai.js - PROFESSIONAL AI REMINDER ENGINE
 // Handles ANY task users throw at it!
+// UPGRADED: Now sounds like a real friend (Yamf style)
 
 const AI = {
     ready: true,
     users: {},
     
     // ===========================================
-    // COMPLETE TASK CATEGORIES
+    // COMPLETE TASK CATEGORIES (KEPT YOURS)
     // ===========================================
     categories: {
         // EDUCATION
@@ -108,7 +109,7 @@ const AI = {
     },
     
     // ===========================================
-    // COMPLETE MOTIVATION TEMPLATES - 2 LINES + EMOJIS
+    // COMPLETE MOTIVATION TEMPLATES (KEPT YOURS)
     // ===========================================
     templates: {
         // EDUCATION
@@ -189,7 +190,7 @@ const AI = {
             "🌍 How things work. That's awesome!"
         ],
         
-        // ===== NEW SUBJECT TEMPLATES =====
+        // ===== SUBJECT TEMPLATES =====
         math: [
             "🧮 Numbers are your friends!",
             "🔢 Solve one problem at a time - you'll get there!",
@@ -312,7 +313,7 @@ const AI = {
             "✨ Make something amazing today!"
         ],
         
-        // WORK
+        // WORK (keeping your existing ones)
         meeting: [
             "🗣️ Your voice matters in this meeting",
             "📢 Speak up and share your ideas!",
@@ -900,7 +901,47 @@ const AI = {
     },
     
     // ===========================================
-    // MAIN MOTIVATION GENERATOR
+    // 🆕 YAMF-STYLE GUIDANCE (REAL FRIEND VIBES)
+    // ===========================================
+    getGuidance: function(category, taskTitle) {
+        switch(category) {
+            case 'exam':
+                return "👉 Focus on key concepts, not everything.\nStart with the easiest question to build confidence.";
+            case 'study':
+                return "👉 Try 25 minutes focus + 5 minutes break.\nRemove distractions and just start.";
+            case 'presentation':
+                return "👉 Speak slowly and clearly.\nPause, breathe, and look at your audience.";
+            case 'project':
+                return "👉 Break it into small steps.\nStart with the easiest part right now.";
+            case 'meeting':
+                return "👉 Prepare 1–2 ideas before joining.\nEven one good point makes a difference.";
+            case 'interview':
+                return "👉 Be honest and confident.\nThey already saw your potential.";
+            case 'workout':
+                return "👉 Just start moving.\nEven 5 minutes is a win.";
+            case 'clean':
+                return "👉 Start with one small area.\nMomentum will follow.";
+            case 'call':
+                return "👉 Just press call.\nDon't overthink it.";
+            case 'birthday':
+                return "👉 Be present.\nEnjoy the moment and make memories.";
+            case 'computer':
+                return "👉 If stuck, debug step by step.\nCheck small parts, not everything at once.";
+            case 'math':
+                return "👉 Solve one step at a time.\nDon't rush—focus on understanding.";
+            case 'essay':
+                return "👉 Just start writing.\nThe first draft doesn't have to be perfect.";
+            case 'homework':
+                return "👉 Pick the shortest problem first.\nMomentum builds quickly.";
+            case 'deadline':
+                return "👉 Break it down.\nWhat's the smallest thing you can do right now?";
+            default:
+                return "👉 Start small.\nYou don't need perfect—just begin.";
+        }
+    },
+    
+    // ===========================================
+    // MAIN MOTIVATION GENERATOR (UPGRADED!)
     // ===========================================
     getMotivation: function(taskTitle, userId, taskNotes = '') {
         // Detect category
@@ -910,12 +951,13 @@ const AI = {
         const templates = this.templates[category] || this.templates.default;
         
         // Get random template
-        let message = templates[Math.floor(Math.random() * templates.length)];
+        let base = templates[Math.floor(Math.random() * templates.length)];
         
-        // Personalize with task title if needed
-        if (message.includes('{task}')) {
-            message = message.replace('{task}', taskTitle);
-        }
+        // 🆕 GET YAMF-STYLE GUIDANCE
+        const guidance = this.getGuidance(category, taskTitle);
+        
+        // 🆕 COMBINE = Motivation + Guidance (THIS IS THE MAGIC!)
+        let finalMessage = `${base}\n\n${guidance}`;
         
         // Store user data if needed
         if (!this.users[userId]) {
@@ -925,50 +967,57 @@ const AI = {
             };
         }
         
-        return message;
+        return finalMessage;
     },
     
     // ===========================================
-    // CHAT RESPONSES
+    // CHAT RESPONSES (UPGRADED - YAMF STYLE!)
     // ===========================================
     chat: function(message, userId, currentTask = '') {
         const msg = message.toLowerCase();
         
-        // Emotional responses
-        if (msg.includes('tired') || msg.includes('exhausted')) {
-            return "😴 Being tired means you've been working hard.\n✨ Take 5 deep breaths, stretch, then do just 5 more minutes. You're closer than you think!";
+        // TIRED response
+        if (msg.includes('tired') || msg.includes('exhausted') || msg.includes('pagod')) {
+            return "😴 I get it… you're tired.\n👉 Rest for a bit, then do just ONE small step. Don't stop completely.";
         }
         
-        if (msg.includes('stuck') || msg.includes('confused')) {
-            return "🔄 Stuck is just temporary.\n🧩 Break it into smaller pieces. What's the ONE thing you CAN do right now? Start there.";
+        // STUCK response
+        if (msg.includes('stuck') || msg.includes('confused') || msg.includes('di ko alam')) {
+            return "🧩 You're not stuck, just overwhelmed.\n👉 Let's simplify it—what's the smallest thing you can do first?";
         }
         
-        if (msg.includes('procrastinate') || msg.includes('later')) {
-            return "⏰ Procrastination is fear in disguise.\n💭 What's the worst that could happen if you start? Now what's the best? Start for 2 minutes and see what happens.";
+        // PROCRASTINATE response
+        if (msg.includes('procrastinate') || msg.includes('later') || msg.includes('mamaya')) {
+            return "⏰ You're overthinking it.\n👉 Start for 2 minutes. That's all. Momentum will follow.";
         }
         
-        if (msg.includes('done') || msg.includes('finished')) {
-            return "🎉 YES! That's what I'm talking about!\n🙌 You made progress. Take a moment to appreciate yourself. What's next?";
+        // NERVOUS response
+        if (msg.includes('nervous') || msg.includes('anxious') || msg.includes('kinakabahan')) {
+            return "😌 That means this matters to you.\n👉 Breathe… slow down… you're more ready than you think.";
         }
         
-        if (msg.includes('nervous') || msg.includes('anxious')) {
-            return "😌 Nervous means you care. That's a good thing.\n🌬️ Take 3 deep breaths. You've prepared for this. Trust yourself.";
+        // DONE response
+        if (msg.includes('done') || msg.includes('finished') || msg.includes('tapos')) {
+            return "🎉 Good job.\n👉 Take a moment, then ask yourself—what's the next small win?";
         }
         
-        if (msg.includes('bored')) {
-            return "🎮 Boredom is just your brain wanting stimulation.\n🏆 Make this task a game. Can you beat your own record?";
+        // HELP response
+        if (msg.includes('help') || msg.includes('tulong')) {
+            return "🤝 I'm here.\n👉 Tell me what part is hard, and we'll solve it step by step.";
         }
         
+        // WHY response (with current task context)
         if (msg.includes('why') && currentTask) {
-            return `❓ You set this reminder for a reason.\n💡 ${currentTask} matters to you. What was that reason? Keep it in mind as you work.`;
+            return `💡 You chose this for a reason.\n👉 "${currentTask}" matters—remember why you started.`;
         }
         
-        if (msg.includes('help')) {
-            return "🤝 I'm here for you.\n💬 Tell me what's hard right now and we'll figure it out together.";
+        // BORED response
+        if (msg.includes('bored') || msg.includes('walang gana')) {
+            return "🎮 Boredom is just your brain wanting stimulation.\n👉 Make this task a game. Can you beat your own record?";
         }
         
         // Default thoughtful response
-        return "💭 I hear you.\n🤔 What do you need most right now? Focus? Rest? Motivation? Tell me more.";
+        return "💭 I'm here with you.\n👉 Let's take it one step at a time. You don't have to do everything at once.";
     },
     
     // ===========================================
@@ -985,3 +1034,4 @@ const AI = {
 // Make it available globally
 window.AI = AI;
 console.log("🚀 AI PROFESSIONAL ENGINE LOADED - Ready for ANY task!");
+console.log("✨ UPGRADED: Now with Yamf-style guidance — real friend vibes!");
