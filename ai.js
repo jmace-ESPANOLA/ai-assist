@@ -940,31 +940,32 @@ const AI = {
         }
     },
     
-    // ===========================================
-    // MAIN MOTIVATION GENERATOR (UPGRADED!)
+   // ===========================================
+    // MAIN MOTIVATION GENERATOR (CLEAN UPGRADE!)
     // ===========================================
     getMotivation: function(taskTitle, userId, taskNotes = '') {
-        // Detect category
+        // 1. Detect category
         const category = this.detectCategory(taskTitle, taskNotes);
         
-        // Get templates for this category (fallback to default)
+        // 2. Get templates (fallback to default)
         const templates = this.templates[category] || this.templates.default;
         
-        // Get random template
+        // 3. Get random base message
         let base = templates[Math.floor(Math.random() * templates.length)];
         
-        // 🆕 GET YAMF-STYLE GUIDANCE
+        // 4. Get the Yamf-style tip
         const guidance = this.getGuidance(category, taskTitle);
         
-        // 🆕 COMBINE = Motivation + Guidance (THIS IS THE MAGIC!)
-        let finalMessage = `${base}\n\n${guidance}`;
+        // 5. SMART LOGIC: 
+        // If it's a random task like "c", ONLY show the short tip.
+        // If it's a real task (like 'math'), show both!
+        let finalMessage = (category === 'default') 
+            ? `${guidance}` 
+            : `${base}\n\n${guidance}`;
         
-        // Store user data if needed
+        // Store user data
         if (!this.users[userId]) {
-            this.users[userId] = {
-                id: userId,
-                tasks: []
-            };
+            this.users[userId] = { id: userId, tasks: [] };
         }
         
         return finalMessage;
