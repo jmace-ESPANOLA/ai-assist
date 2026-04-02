@@ -114,33 +114,33 @@ const AI = {
     templates: {
         // EDUCATION
         exam: [
-            "📚 You've prepared for this! Trust your preparation",
-            "🧘 Stay calm and focused. You know this material!",
+            "📚 You've prepared for this! Trust your preparation\n your future self said that's nothing\nSo chillax.",
+            "🧘 Stay calm and focused. You know this material!\n your future self said that's nothing\nSo chillax.",
             "⏰ This exam is just a moment in time",
-            "💪 Give it your best and keep moving forward!",
+            "💪 Give it your best and keep moving forward!\n your future self said that's nothing\nSo chillax.",
             "🌬️ Breathe deep. You know more than you think",
             "🧠 Your brain has got this. Trust yourself!",
             "🎯 One question at a time. Stay focused",
-            "✨ You've got this! Victory is within reach!",
+            "✨ You've got this! Victory is within reach!\n your future self said that's nothing\nSo chillax.",
             "🌟 Future you will be so proud",
-            "🙌 Of how you handled this challenge!"
+            "🙌 Of how you handled this challenge!\n your future self said that's nothing\nSo chillax."
         ],
         
         homework: [
-            "📝 Progress > perfection. Just get started now",
-            "⚡ Every problem solved builds your brain power!",
-            "🧠 Every exercise makes you smarter",
-            "💪 Keep pushing forward, you're growing!",
-            "✅ Done is better than perfect. Start now",
-            "🎨 You can always refine and improve later!",
-            "⏱️ 30 minutes of focus now",
-            "😌 Equals relief and peace of mind later!"
+            "📝 Progress > perfection. Just get started now.\nyour future self is counting on you!",
+            "⚡ Every problem solved builds your brain power!\nyour future self is counting on you!",
+            "🧠 Every exercise makes you smarter\nyour future self is counting on you!\nDo it",
+            "💪 Keep pushing forward, you're growing!\nyour future self is counting on you!",
+            "✅ Done is better than perfect. Start now.\nyour future self is counting on you!",
+            "🎨 You can always refine and improve later!\nyour future self is counting on you!",
+            "⏱️ 30 minutes of focus now\nyour future self is counting on you!",
+            "😌 Equals relief and peace of mind later!\nyour future self is counting on you!"
         ],
         
         study: [
-            "💪 Your brain is like a muscle",
+            "💪 Your brain is like a muscle\nSo train it!",
             "📖 This study session is your workout!",
-            "📚 Every page you read makes you smarter",
+            "📚 Every page you read makes you smarter\nNot really so Smart But enough to be a Successfull\nStudy well!",
             "📈 Than yesterday. Keep that momentum!",
             "🌟 Future you will thank you",
             "🙏 For this dedicated study session!",
@@ -153,7 +153,7 @@ const AI = {
             "📝 Onto the page without fear!",
             "✍️ First draft = just get ideas down",
             "🔄 Editing comes later. Write now!",
-            "📄 Every great writer started blank",
+            "📄 Every great writer started blank\nLike you right now, I know you can do it bro.",
             "🚀 Start typing. Your story awaits!",
             "💫 Your perspective is unique",
             "🌟 Share it with the world!"
@@ -164,10 +164,10 @@ const AI = {
             "⭐ Make yourself proud with this one!",
             "🧩 Break it into small pieces",
             "⚔️ Then conquer each piece one by one!",
-            "🤝 Your future self is counting",
+            "🤝 Your future self is counting\nRight Now show them what you got!",
             "⏰ On you to finish this strong!",
             "🎨 This is going to be amazing",
-            "✨ When it's done. Keep creating!"
+            "✨ When it's done. Keep creating!\nBut for now make it done first."
         ],
         
         portfolio: [
