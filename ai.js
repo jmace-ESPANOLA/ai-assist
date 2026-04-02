@@ -941,33 +941,24 @@ const AI = {
     },
     
    // ===========================================
-    // MAIN MOTIVATION GENERATOR (CLEAN UPGRADE!)
+    // MAIN MOTIVATION GENERATOR (SINGLE MESSAGE ONLY)
     // ===========================================
     getMotivation: function(taskTitle, userId, taskNotes = '') {
-        // 1. Detect category
+        // 1. Detect the category (e.g., 'math', 'study', or 'default')
         const category = this.detectCategory(taskTitle, taskNotes);
         
-        // 2. Get templates (fallback to default)
+        // 2. Get the specific list of quotes (fallback to default)
         const templates = this.templates[category] || this.templates.default;
         
-        // 3. Get random base message
-        let base = templates[Math.floor(Math.random() * templates.length)];
+        // 3. Pick one random quote from that list
+        let finalMessage = templates[Math.floor(Math.random() * templates.length)];
         
-        // 4. Get the Yamf-style tip
-        const guidance = this.getGuidance(category, taskTitle);
-        
-        // 5. SMART LOGIC: 
-        // If it's a random task like "c", ONLY show the short tip.
-        // If it's a real task (like 'math'), show both!
-        let finalMessage = (category === 'default') 
-            ? `${guidance}` 
-            : `${base}\n\n${guidance}`;
-        
-        // Store user data
+        // 4. Store user data (standard logic)
         if (!this.users[userId]) {
             this.users[userId] = { id: userId, tasks: [] };
         }
         
+        // 5. RETURN ONLY THE QUOTE
         return finalMessage;
     },
     
