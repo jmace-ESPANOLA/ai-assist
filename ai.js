@@ -48,7 +48,7 @@ const AI = {
         haircut: ['haircut', 'barber', 'salon', 'hair appointment'],
         
         // HOUSEHOLD
-        groceries: ['grocery', 'food shopping', 'supermarket', 'store'],
+        groceries: ['grocery', 'food shopping', 'supermarket', 'store', 'milk', 'buy', 'groceries', 'market'],
         cook: ['cook', 'meal prep', 'dinner', 'lunch', 'breakfast', 'bake'],
         clean: ['clean', 'tidy', 'organize', 'declutter', 'laundry', 'dishes', 'vacuum'],
         trash: ['trash', 'garbage', 'recycle', 'take out'],
