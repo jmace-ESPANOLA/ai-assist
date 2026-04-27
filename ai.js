@@ -941,6 +941,8 @@ const AI = {
                 return "👉 Pick the shortest problem first.\nMomentum builds quickly.";
             case 'deadline':
                 return "👉 Break it down.\nWhat's the smallest thing you can do right now?";
+            case 'work':
+                return "👉 Future you is tired of waiting.\nMake them proud TODAY.";
             default:
                 return "👉 Start small.\nYou don't need perfect—just begin.";
         }
