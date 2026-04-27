@@ -26,7 +26,9 @@ const AI = {
         history: ['history', 'social studies', 'geography', 'politics', 'government', 'civics', 'rizal', 'jose rizal', 'dr. rizal', 'noli', 'fili', 'el filibusterismo', 'noli me tangere'],
         computer: ['it', 'programming', 'coding', 'web', 'software', 'developer', 'computer', 'html', 'css', 'javascript', 'react', 'app', 'mobile', 'database', 'backend', 'frontend', 'fullstack', 'api', 'algorithm'],
         
-        // WORK
+        
+        // WORK (Enhanced)
+        work: ['work', 'office', 'shift', 'overtime', 'task', 'to-do', 'todo', 'asap', 'urgent', 'priority'],
         meeting: ['meeting', 'call', 'sync', 'standup', 'conference', 'webinar', 'zoom'],
         deadline: ['deadline', 'due', 'deliver', 'submit', 'milestone', 'release'],
         presentation: ['presentation', 'pitch', 'deck', 'talk', 'speak', 'present'],
@@ -140,7 +142,7 @@ const AI = {
         study: [
             "💪 Your brain is like a muscle\nSo train it!",
             "📖 This study session is your workout!",
-            "📚 Every page you read makes you smarter\nNot really so Smart But enough to be a Successfull\nStudy well!",
+            "📚 Every page you read makes you smarter",
             "📈 Than yesterday. Keep that momentum!",
             "🌟 Future you will thank you",
             "🙏 For this dedicated study session!",
@@ -314,17 +316,22 @@ const AI = {
         ],
         
         // WORK (keeping your existing ones)
-        meeting: [
-            "🗣️ Your voice matters in this meeting",
-            "📢 Speak up and share your ideas!",
-            "📋 Come prepared, leave impactful",
-            "✨ Make your presence count today!",
-            "⭐ This is your time to shine",
-            "💡 Share your brilliance with them!",
-            "👂 Listen actively, contribute thoughtfully",
-            "🤝 Great meetings build great teams!"
-        ],
-        
+          meeting: [
+                "🗣️ Your voice matters in this meeting",
+                "📢 Speak up and share your ideas!",
+                "📋 Come prepared, leave impactful",
+                "✨ Make your presence count today!",
+                "⭐ This is your time to shine",
+                "💡 Share your brilliance with them!",
+                "👂 Listen actively, contribute thoughtfully",
+                "🤝 Great meetings build great teams!"
+            ],
+            work: [
+               "💼 WAKE UP.\nNo one is coming to save your career—you build it TODAY.",
+                "⚡ Move.\nWhile you're thinking, someone else is already winning.\nSo move NOW!",
+                "🔥 Get up and WORK.\nDreams don’t work unless YOU do.",
+                "💪 No excuses.\nOnly results matter at the end of the day.\nGet to work NOW!",
+                ],
         deadline: [
             "🏁 Deadlines are finish lines in disguise",
             "🙌 You're almost there! Keep going!",
@@ -874,7 +881,6 @@ const AI = {
             "🚀 Start right now. No excuses!",
             "⭐ You're capable of amazing things",
             "🔨 Prove it to yourself today!",
-            "🎯 This task = one step closer",
             "💫 To your biggest goals. Go!",
             "📣 Your future self is cheering",
             "🎉 Loudly for you. Get it done!"
