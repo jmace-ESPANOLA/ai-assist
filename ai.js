@@ -319,9 +319,7 @@ const AI = {
           meeting: [
                 "🗣️ Your voice matters in this meeting",
                 "📢 Speak up and share your ideas!",
-                "📋 Come prepared, leave impactful",
                 "✨ Make your presence count today!",
-                "⭐ This is your time to shine",
                 "💡 Share your brilliance with them!",
                 "👂 Listen actively, contribute thoughtfully",
                 "🤝 Great meetings build great teams!"
