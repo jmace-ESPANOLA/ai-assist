@@ -116,42 +116,28 @@ const AI = {
     templates: {
         // EDUCATION
         exam: [
-            "📚 You've prepared for this! Trust your preparation\n your future self said that's nothing\nSo chillax.",
-            "🧘 Stay calm and focused. You know this material!\n your future self said that's nothing\nSo chillax.",
-            "⏰ This exam is just a moment in time",
-            "💪 Give it your best and keep moving forward!\n your future self said that's nothing\nSo chillax.",
-            "🌬️ Breathe deep. You know more than you think",
+            "📚 You've prepared for this! Trust your preparation",
+            "🧘 Remember this \nStay calm and focused.",
+            "🎯 One question at a time. Stay sharp!",
+            "💪 Give it your best",
+            
             "🧠 Your brain has got this. Trust yourself!",
             "🎯 One question at a time. Stay focused",
-            "✨ You've got this! Victory is within reach!\n your future self said that's nothing\nSo chillax.",
-            "🌟 Future you will be so proud",
-            "🙌 Of how you handled this challenge!\n your future self said that's nothing\nSo chillax."
+          
         ],
         
         homework: [
-            "📝 Progress > perfection. Just get started now.\nyour future self is counting on you!",
-            "⚡ Every problem solved builds your brain power!\nyour future self is counting on you!",
-            "🧠 Every exercise makes you smarter\nyour future self is counting on you!\nDo it",
-            "💪 Keep pushing forward, you're growing!\nyour future self is counting on you!",
-            "✅ Done is better than perfect. Start now.\nyour future self is counting on you!",
-            "🎨 You can always refine and improve later!\nyour future self is counting on you!",
+            "🧠 Every task makes you smarter. Do it!",
             "⏱️ 30 minutes of focus now\nyour future self is counting on you!",
-            "😌 Equals relief and peace of mind later!\nyour future self is counting on you!"
         ],
         
         study: [
             "💪 Your brain is like a muscle\nSo train it!",
             "📖 This study session is your workout!",
             "📚 Every page you read makes you smarter",
-            "📈 Than yesterday. Keep that momentum!",
-            "🌟 Future you will thank you",
-            "🙏 For this dedicated study session!",
-            "🧩 Small study sessions add up",
-            "🎓 To big knowledge. Keep stacking!"
         ],
         
         essay: [
-            "🗣️ Your voice matters. Let it flow",
             "📝 Onto the page without fear!",
             "✍️ First draft = just get ideas down",
             "🔄 Editing comes later. Write now!",
@@ -164,22 +150,15 @@ const AI = {
         project: [
             "🏗️ This project shows your capability",
             "⭐ Make yourself proud with this one!",
-            "🧩 Break it into small pieces",
-            "⚔️ Then conquer each piece one by one!",
-            "🤝 Your future self is counting\nRight Now show them what you got!",
-            "⏰ On you to finish this strong!",
             "🎨 This is going to be amazing",
             "✨ When it's done. Keep creating!\nBut for now make it done first."
+            "🚀 1% progress is better than 0%. Move the needle!",
         ],
         
         portfolio: [
             "💼 Your portfolio = your future",
-            "🎯 Make every piece count toward it!",
-            "🚀 This isn't just a task",
             "🏆 This is your career taking shape!",
-            "👀 Show them what you've got",
             "💪 Your skills deserve the spotlight!",
-            "⭐ Quality work right now",
             "🔓 Equals opportunities coming later!"
         ],
         
@@ -317,23 +296,24 @@ const AI = {
         
         // WORK (keeping your existing ones)
           meeting: [
-                "🗣️ Your voice matters in this meeting",
-                "📢 Speak up and share your ideas!",
-                "✨ Make your presence count today!",
-                "💡 Share your brilliance with them!",
-                "👂 Listen actively, contribute thoughtfully",
-                "🤝 Great meetings build great teams!"
+                    "🤝 Great meetings build great teams!"
+                  "🌟 Collaboration sparks innovation — let’s make this meeting count!"
+                  "🤝 Show up, speak up, and make an impact!",
+                "💡 Your ideas matter—share them with confidence!",
+              "🎧 Listen well, speak well, and win together!",
+              "🤝 Great teamwork starts with a great meeting!",
+              "You survived every meeting so far. This one is no different."
             ],
             work: [
                "💼 WAKE UP.\nNo one is coming to save your career—you build it TODAY.",
-                "⚡ Move.\nWhile you're thinking, someone else is already winning.\nSo move NOW!",
+                "⚡ While you're thinking, someone else is already winning. Move Now!",
                 "🔥 Get up and WORK.\nDreams don’t work unless YOU do.",
                 "💪 No excuses.\nOnly results matter at the end of the day.\nGet to work NOW!",
                 ],
         deadline: [
-            "🏁 Deadlines are finish lines in disguise",
+            
             "🙌 You're almost there! Keep going!",
-            "📣 Future you is cheering loudly",
+           
             "🎉 For you to meet this deadline!",
             "💎 Pressure makes diamonds. You've got this",
             "✨ Shine bright under the pressure!",
