@@ -996,21 +996,49 @@ const AI = {
 
     // DEFAULT - for anything not caught above
     default: [
-      "💪 You've absolutely got this now",
+      "💪 You've absolutely got this!",
       "🌟 Future you is counting on you!",
       "👣 One small step at a time",
-      "📈 You're making real progress daily!",
-      "🌱 Small actions compound into results",
-      "🏆 Big results over time. Keep going!",
-      "🙏 Future you will be grateful",
-      "✨ You did this. Make them proud!",
       "✅ Done is better than perfect",
       "🚀 Start right now. No excuses!",
       "⭐ You're capable of amazing things",
-      "🔨 Prove it to yourself today!",
-      "💫 To your biggest goals. Go!",
-      "📣 Your future self is cheering",
-      "🎉 Loudly for you. Get it done!",
+      "🎉 Your future self is cheering loudly for you. Get it done!",
     ],
   },
+
+  detectCategory: function(taskTitle, taskNotes) {
+    taskNotes = taskNotes || '';
+    const text = (taskTitle + ' ' + taskNotes).toLowerCase();
+    for (let category in this.categories) {
+      const keywords = this.categories[category];
+      for (let i = 0; i < keywords.length; i++) {
+        if (text.includes(keywords[i])) {
+          return category;
+        }
+      }
+    }
+    return 'default';
+  },
+
+  getMotivation: function(taskTitle, userId, taskNotes) {
+    taskNotes = taskNotes || '';
+    const category = this.detectCategory(taskTitle, taskNotes);
+    const templates = this.templates[category] || this.templates.default;
+    return templates[Math.floor(Math.random() * templates.length)];
+  },
+
+  chat: function(message, userId, currentTask) {
+    currentTask = currentTask || '';
+    const msg = message.toLowerCase();
+    if (msg.includes('tired') || msg.includes('pagod')) return "😴 Rest a bit, then do one small step. Don't quit completely.";
+    if (msg.includes('stuck') || msg.includes('confused')) return "🧩 Break it down. What's the smallest thing you can do first?";
+    if (msg.includes('procrastinate') || msg.includes('mamaya')) return "⏰ Start for 2 minutes. Momentum will follow.";
+    if (msg.includes('nervous') || msg.includes('kinakabahan')) return "😌 It means you care. Breathe. You'll handle it.";
+    if (msg.includes('done') || msg.includes('tapos')) return "🎉 Good job! Progress is progress. What's next?";
+    if (msg.includes('help') || msg.includes('tulong')) return "🤝 I'm here. Tell me what part is hard, and we'll solve it together.";
+    if (msg.includes('thanks') || msg.includes('salamat')) return "🙌 Anytime bro! That's what I'm here for!";
+    return "💭 I'm here with you. Let's take it one step at a time.";
+  },
 };
+
+window.AI = AI;
