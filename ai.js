@@ -11,137 +11,24 @@ const AI = {
   // ===========================================
   categories: {
     // EDUCATION
-    exam: [
-      "exam",
-      "test",
-      "quiz",
-      "midterm",
-      "final",
-      "sat",
-      "act",
-      "gre",
-      "certification",
-      "assessment",
-    ],
-    homework: [
-      "homework",
-      "assignment",
-      "problem set",
-      "worksheet",
-      "exercises",
-    ],
-    study: [
-      "study",
-      "review",
-      "memorize",
-      "flashcards",
-      "read chapter",
-      "textbook",
-    ],
-    essay: [
-      "essay",
-      "paper",
-      "thesis",
-      "dissertation",
-      "research paper",
-      "write up",
-    ],
-    project: [
-      "project",
-      "capstone",
-      "portfolio",
-      "presentation",
-      "slides",
-      "demo",
-    ],
+    exam: ["exam", "test", "quiz", "midterm", "final", "sat", "act", "gre", "certification", "assessment"],
+    homework: ["homework", "assignment", "problem set", "worksheet", "exercises"],
+    study: ["study", "review", "memorize", "flashcards", "read chapter", "textbook"],
+    essay: ["essay", "paper", "thesis", "dissertation", "research paper", "write up"],
+    project: ["project", "capstone", "portfolio", "presentation", "slides", "demo"],
     lab: ["lab", "experiment", "report", "scientific", "research"],
 
     // SUBJECTS
-    math: [
-      "math",
-      "mathematics",
-      "algebra",
-      "calculus",
-      "geometry",
-      "trigonometry",
-      "arithmetic",
-    ],
-    science: [
-      "science",
-      "biology",
-      "chemistry",
-      "physics",
-      "astronomy",
-      "earth science",
-    ],
+    math: ["math", "mathematics", "algebra", "calculus", "geometry", "trigonometry", "arithmetic"],
+    science: ["science", "biology", "chemistry", "physics", "astronomy", "earth science"],
     filipino: ["filipino", "tagalog", "philippine", "wikang", "panitikan"],
-    english: [
-      "english",
-      "grammar",
-      "literature",
-      "writing",
-      "reading",
-      "vocabulary",
-    ],
-    history: [
-      "history",
-      "social studies",
-      "geography",
-      "politics",
-      "government",
-      "civics",
-      "rizal",
-      "jose rizal",
-      "dr. rizal",
-      "noli",
-      "fili",
-      "el filibusterismo",
-      "noli me tangere",
-    ],
-    computer: [
-      "it",
-      "programming",
-      "coding",
-      "web",
-      "software",
-      "developer",
-      "computer",
-      "html",
-      "css",
-      "javascript",
-      "react",
-      "app",
-      "mobile",
-      "database",
-      "backend",
-      "frontend",
-      "fullstack",
-      "api",
-      "algorithm",
-    ],
+    english: ["english", "grammar", "literature", "writing", "reading", "vocabulary"],
+    history: ["history", "social studies", "geography", "politics", "government", "civics", "rizal", "jose rizal", "dr. rizal", "noli", "fili", "el filibusterismo", "noli me tangere"],
+    computer: ["programming", "coding", "web", "software", "developer", "computer", "html", "css", "javascript", "react", "app", "mobile", "database", "backend", "frontend", "fullstack", "api", "algorithm"],
 
     // WORK (Enhanced)
-    work: [
-      "work",
-      "office",
-      "shift",
-      "overtime",
-      "task",
-      "to-do",
-      "todo",
-      "asap",
-      "urgent",
-      "priority",
-    ],
-    meeting: [
-      "meeting",
-      "call",
-      "sync",
-      "standup",
-      "conference",
-      "webinar",
-      "zoom",
-    ],
+    work: ["work", "office", "shift", "overtime", "task", "to-do", "todo", "asap", "urgent", "priority"],
+    meeting: ["meeting", "call", "sync", "standup", "conference", "webinar", "zoom"],
     deadline: ["deadline", "due", "deliver", "submit", "milestone", "release"],
     presentation: ["presentation", "pitch", "deck", "talk", "speak", "present"],
     client: ["client", "customer", "stakeholder", "vendor"],
@@ -149,40 +36,10 @@ const AI = {
     interview: ["interview", "job", "hiring", "recruiter", "application"],
 
     // HEALTH
-    workout: [
-      "workout",
-      "gym",
-      "exercise",
-      "run",
-      "jog",
-      "cardio",
-      "lift",
-      "fitness",
-    ],
-    yoga: [
-      "yoga",
-      "pilates",
-      "stretch",
-      "flexibility",
-      "meditation",
-      "breathe",
-    ],
-    doctor: [
-      "doctor",
-      "dentist",
-      "appointment",
-      "checkup",
-      "physical",
-      "therapy",
-    ],
-    medication: [
-      "medication",
-      "pill",
-      "medicine",
-      "prescription",
-      "vitamin",
-      "supplement",
-    ],
+    workout: ["workout", "gym", "exercise", "run", "jog", "cardio", "lift", "fitness", "walking"],
+    yoga: ["yoga", "pilates", "stretch", "flexibility", "meditation", "breathe"],
+    doctor: ["doctor", "dentist", "appointment", "checkup", "physical", "therapy"],
+    medication: ["medication", "pill", "medicine", "prescription", "vitamin", "supplement"],
     water: ["water", "hydrate", "drink"],
     sleep: ["sleep", "bed", "nap", "rest", "asleep"],
 
@@ -192,36 +49,12 @@ const AI = {
     haircut: ["haircut", "barber", "salon", "hair appointment"],
 
     // HOUSEHOLD
-    groceries: [
-      "grocery",
-      "food shopping",
-      "supermarket",
-      "store",
-      "milk",
-      "buy",
-      "groceries",
-      "market",
-    ],
+    groceries: ["grocery", "food shopping", "supermarket", "store", "milk", "buy", "groceries", "market"],
     cook: ["cook", "meal prep", "dinner", "lunch", "breakfast", "bake"],
-    clean: [
-      "clean",
-      "tidy",
-      "organize",
-      "declutter",
-      "laundry",
-      "dishes",
-      "vacuum",
-    ],
+    clean: ["clean", "tidy", "organize", "declutter", "laundry", "dishes", "vacuum"],
     trash: ["trash", "garbage", "recycle", "take out"],
     yard: ["yard", "garden", "lawn", "plants", "water plants", "mow"],
-    repair: [
-      "fix",
-      "repair",
-      "maintenance",
-      "plumbing",
-      "electrical",
-      "broken",
-    ],
+    repair: ["fix", "repair", "maintenance", "plumbing", "electrical", "broken"],
 
     // FINANCE
     bills: ["bill", "pay", "rent", "mortgage", "utilities", "subscription"],
@@ -1006,9 +839,9 @@ const AI = {
     ],
   },
 
-  detectCategory: function(taskTitle, taskNotes) {
-    taskNotes = taskNotes || '';
-    const text = (taskTitle + ' ' + taskNotes).toLowerCase();
+  detectCategory: function (taskTitle, taskNotes) {
+    taskNotes = taskNotes || "";
+    const text = (taskTitle + " " + taskNotes).toLowerCase();
     for (let category in this.categories) {
       const keywords = this.categories[category];
       for (let i = 0; i < keywords.length; i++) {
@@ -1017,26 +850,33 @@ const AI = {
         }
       }
     }
-    return 'default';
+    return "default";
   },
 
-  getMotivation: function(taskTitle, userId, taskNotes) {
-    taskNotes = taskNotes || '';
+  getMotivation: function (taskTitle, userId, taskNotes) {
+    taskNotes = taskNotes || "";
     const category = this.detectCategory(taskTitle, taskNotes);
     const templates = this.templates[category] || this.templates.default;
     return templates[Math.floor(Math.random() * templates.length)];
   },
 
-  chat: function(message, userId, currentTask) {
-    currentTask = currentTask || '';
+  chat: function (message, userId, currentTask) {
+    currentTask = currentTask || "";
     const msg = message.toLowerCase();
-    if (msg.includes('tired') || msg.includes('pagod')) return "😴 Rest a bit, then do one small step. Don't quit completely.";
-    if (msg.includes('stuck') || msg.includes('confused')) return "🧩 Break it down. What's the smallest thing you can do first?";
-    if (msg.includes('procrastinate') || msg.includes('mamaya')) return "⏰ Start for 2 minutes. Momentum will follow.";
-    if (msg.includes('nervous') || msg.includes('kinakabahan')) return "😌 It means you care. Breathe. You'll handle it.";
-    if (msg.includes('done') || msg.includes('tapos')) return "🎉 Good job! Progress is progress. What's next?";
-    if (msg.includes('help') || msg.includes('tulong')) return "🤝 I'm here. Tell me what part is hard, and we'll solve it together.";
-    if (msg.includes('thanks') || msg.includes('salamat')) return "🙌 Anytime bro! That's what I'm here for!";
+    if (msg.includes("tired") || msg.includes("pagod"))
+      return "😴 Rest a bit, then do one small step. Don't quit completely.";
+    if (msg.includes("stuck") || msg.includes("confused"))
+      return "🧩 Break it down. What's the smallest thing you can do first?";
+    if (msg.includes("procrastinate") || msg.includes("mamaya"))
+      return "⏰ Start for 2 minutes. Momentum will follow.";
+    if (msg.includes("nervous") || msg.includes("kinakabahan"))
+      return "😌 It means you care. Breathe. You'll handle it.";
+    if (msg.includes("done") || msg.includes("tapos"))
+      return "🎉 Good job! Progress is progress. What's next?";
+    if (msg.includes("help") || msg.includes("tulong"))
+      return "🤝 I'm here. Tell me what part is hard, and we'll solve it together.";
+    if (msg.includes("thanks") || msg.includes("salamat"))
+      return "🙌 Anytime bro! That's what I'm here for!";
     return "💭 I'm here with you. Let's take it one step at a time.";
   },
 };
